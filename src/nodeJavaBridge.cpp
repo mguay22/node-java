@@ -7,7 +7,7 @@ extern "C" {
     Java::Init(target);
     JavaObject::Init(target);
   }
-
+  adfsasdfasd
   NODE_MODULE_INIT() {
     Init(exports);
   }
