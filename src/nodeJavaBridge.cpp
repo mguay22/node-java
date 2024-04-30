@@ -3,12 +3,10 @@
 #include "javaObject.h"
 
 extern "C" {
-  static void init(v8::Local<v8::Object> target) {
+  static void init(v8::Local<v8::Object> target, v8::Local<v8::Value>, void*) {
     Java::Init(target);
     JavaObject::Init(target);
   }
-
-  NAN_MODULE_WORKER_ENABLED(nodejavabridge_bindings, init);
 
   NODE_MODULE(nodejavabridge_bindings, init);
 }
